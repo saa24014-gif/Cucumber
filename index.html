@@ -11,53 +11,70 @@
 body{
     margin:0;
     font-family:"Yu Gothic",sans-serif;
-    background:linear-gradient(to bottom,#f4fff4,#d8f3dc);
+    background:linear-gradient(to bottom,#f1fff4,#d8f3dc,#fff8e7);
     color:#333;
 }
 
+/* ヘッダー */
+
 header{
-    text-align:center;
-    background:#2d6a4f;
+    background:linear-gradient(135deg,#1b4332,#2d6a4f);
     color:white;
-    padding:40px;
+    text-align:center;
+    padding:50px 20px;
 }
 
 h1{
-    font-size:3em;
     margin:0;
+    font-size:3.5em;
 }
 
 .subtitle{
-    font-size:1.1em;
+    color:#d8f3dc;
+    font-size:1.2em;
 }
+
+/* セクション */
 
 section{
     max-width:900px;
     margin:30px auto;
-    background:white;
     padding:25px;
-    border-radius:15px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    background:white;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+section:hover{
+    transform:translateY(-5px);
 }
 
 h2{
-    color:#2d6a4f;
-    border-left:6px solid #52b788;
-    padding-left:10px;
+    color:#ff7b00;
+    border-left:8px solid #52b788;
+    padding-left:12px;
 }
+
+/* 画像 */
 
 img{
-    width:100%;
-    max-width:500px;
+    width:70%;
+    max-width:350px;
     display:block;
     margin:auto;
-    border-radius:15px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
+/* リスト */
+
 ul li{
-    margin:10px;
+    margin:12px;
     font-size:1.05em;
 }
+
+/* 表 */
 
 table{
     width:100%;
@@ -70,11 +87,17 @@ th{
     color:white;
 }
 
+td{
+    background:#f8fff8;
+}
+
 th,td{
     border:1px solid #ccc;
     padding:12px;
     text-align:center;
 }
+
+/* ボタン */
 
 .button-area{
     text-align:center;
@@ -86,26 +109,32 @@ button{
     border:none;
     padding:15px 25px;
     margin:10px;
-    border-radius:10px;
+    border-radius:12px;
     cursor:pointer;
     font-size:16px;
     transition:0.3s;
 }
 
 button:hover{
-    background:#1b4332;
     transform:scale(1.05);
+    background:#1b4332;
 }
+
+/* フッター */
 
 footer{
     text-align:center;
     padding:20px;
-    color:#666;
+    color:#ff7b00;
+    font-weight:bold;
 }
 
+/* スマホ対応 */
+
 @media(max-width:600px){
+
     h1{
-        font-size:2em;
+        font-size:2.2em;
     }
 
     section{
@@ -113,6 +142,10 @@ footer{
     }
 
     button{
+        width:90%;
+    }
+
+    img{
         width:90%;
     }
 }
@@ -123,8 +156,10 @@ footer{
 <body>
 
 <header>
-    <h1>キュウリ</h1>
-    <p class="subtitle">みずみずしく育てやすい夏野菜</p>
+    <h1>🥒 キュウリ 🥒</h1>
+    <p class="subtitle">
+        夏を彩るみずみずしい緑の野菜
+    </p>
 </header>
 
 <section>
@@ -132,10 +167,22 @@ footer{
 <h2>キュウリの特徴</h2>
 
 <p>
-キュウリはウリ科に属する夏野菜で、日本でも広く栽培されています。
-約95％が水分でできており、暑い季節にぴったりの野菜です。
-サラダや漬物など様々な料理に利用され、家庭菜園でも人気があります。
-また、生育が早く収穫の楽しみを味わいやすい野菜として知られています。
+キュウリはウリ科に属する夏野菜で、日本各地で栽培されています。
+約95％が水分でできているため、暑い季節でもさっぱりと食べることができます。
+サラダや漬物など幅広い料理に利用され、家庭菜園でも人気があります。
+また、生育が早く収穫までの変化を観察しやすいため、栽培学習にも適した野菜です。
+</p>
+
+</section>
+
+<section>
+
+<h2>私がキュウリに興味を持った理由</h2>
+
+<p>
+私はキュウリが成長の早い野菜であることに興味を持ちました。
+花が咲いてから短期間で実が大きくなるため、日々の変化を観察する楽しさがあります。
+また、収穫したキュウリをそのまま食べたり料理に使ったりできることも魅力だと思いました。
 </p>
 
 </section>
@@ -144,7 +191,8 @@ footer{
 
 <h2>キュウリの写真</h2>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Cucumber.jpg" alt="キュウリ">
+<!-- 自分の写真を使う場合 -->
+<img src="cucumber.jpg" alt="キュウリ">
 
 </section>
 
@@ -166,6 +214,7 @@ footer{
 <h2>基本情報</h2>
 
 <table>
+
 <tr>
 <th>項目</th>
 <th>内容</th>
@@ -173,17 +222,17 @@ footer{
 
 <tr>
 <td>種まき時期</td>
-<td>4～5月</td>
+<td>4〜5月</td>
 </tr>
 
 <tr>
 <td>収穫時期</td>
-<td>6～8月</td>
+<td>6〜8月</td>
 </tr>
 
 <tr>
 <td>難易度</td>
-<td>★★☆☆☆（比較的やさしい）</td>
+<td>★★☆☆☆</td>
 </tr>
 
 <tr>
@@ -219,19 +268,19 @@ footer{
 </section>
 
 <footer>
-2026 キュウリ紹介サイト
+🥒 キュウリ紹介サイト 🥒
 </footer>
 
 <script>
 
 document.getElementById("btn1").onclick=function(){
-this.innerHTML="サイトを開きます！";
-this.style.backgroundColor="#e76f51";
+    this.innerHTML="学校サイトへ移動！";
+    this.style.backgroundColor="#e76f51";
 }
 
 document.getElementById("btn2").onclick=function(){
-this.innerHTML="栽培方法をチェック！";
-this.style.backgroundColor="#f4a261";
+    this.innerHTML="栽培方法をチェック！";
+    this.style.backgroundColor="#ffb703";
 }
 
 </script>
