@@ -1,63 +1,167 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>キュウリ紹介ページ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>キュウリ紹介サイト</title>
 
 <style>
+
 body{
-    background-color:#e8ffe8;
-    font-family:sans-serif;
+    margin:0;
+    font-family:"Yu Gothic",sans-serif;
+    background:linear-gradient(to bottom,#f4fff4,#d8f3dc);
+    color:#333;
+}
+
+header{
     text-align:center;
+    background:#2d6a4f;
+    color:white;
+    padding:40px;
 }
 
 h1{
-    color:green;
+    font-size:3em;
+    margin:0;
+}
+
+.subtitle{
+    font-size:1.1em;
+}
+
+section{
+    max-width:900px;
+    margin:30px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    color:#2d6a4f;
+    border-left:6px solid #52b788;
+    padding-left:10px;
+}
+
+img{
+    width:100%;
+    max-width:500px;
+    display:block;
+    margin:auto;
+    border-radius:15px;
+}
+
+ul li{
+    margin:10px;
+    font-size:1.05em;
 }
 
 table{
-    margin:auto;
+    width:100%;
     border-collapse:collapse;
+    margin-top:15px;
+}
+
+th{
+    background:#52b788;
+    color:white;
 }
 
 th,td{
-    border:1px solid black;
-    padding:10px;
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:center;
+}
+
+.button-area{
+    text-align:center;
 }
 
 button{
-    background-color:green;
+    background:#40916c;
     color:white;
-    padding:10px 20px;
-    margin:10px;
     border:none;
+    padding:15px 25px;
+    margin:10px;
+    border-radius:10px;
     cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
 }
 
 button:hover{
-    background-color:darkgreen;
+    background:#1b4332;
+    transform:scale(1.05);
 }
-</style>
 
+footer{
+    text-align:center;
+    padding:20px;
+    color:#666;
+}
+
+@media(max-width:600px){
+    h1{
+        font-size:2em;
+    }
+
+    section{
+        margin:15px;
+    }
+
+    button{
+        width:90%;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>キュウリ</h1>
+<header>
+    <h1>キュウリ</h1>
+    <p class="subtitle">みずみずしく育てやすい夏野菜</p>
+</header>
+
+<section>
+
+<h2>キュウリの特徴</h2>
 
 <p>
-キュウリは夏を代表する野菜です。<br>
-水分が多く、サラダや漬物に利用されます。<br>
-家庭菜園でも人気があり、比較的育てやすい野菜です。
+キュウリはウリ科に属する夏野菜で、日本でも広く栽培されています。
+約95％が水分でできており、暑い季節にぴったりの野菜です。
+サラダや漬物など様々な料理に利用され、家庭菜園でも人気があります。
+また、生育が早く収穫の楽しみを味わいやすい野菜として知られています。
 </p>
+
+</section>
+
+<section>
+
+<h2>キュウリの写真</h2>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Cucumber.jpg" alt="キュウリ">
+
+</section>
+
+<section>
 
 <h2>栽培のポイント</h2>
 
 <ul>
-<li>日当たりの良い場所で育てる</li>
-<li>こまめに水やりをする</li>
-<li>支柱を立ててつるを伸ばす</li>
+<li>日当たりと風通しの良い場所で育てる。</li>
+<li>土が乾かないようにこまめに水やりをする。</li>
+<li>支柱やネットを立ててつるを伸ばす。</li>
+<li>実が大きくなりすぎる前に収穫する。</li>
 </ul>
+
+</section>
+
+<section>
 
 <h2>基本情報</h2>
 
@@ -69,35 +173,69 @@ button:hover{
 
 <tr>
 <td>種まき時期</td>
-<td>4〜5月</td>
+<td>4～5月</td>
 </tr>
 
 <tr>
 <td>収穫時期</td>
-<td>6〜8月</td>
+<td>6～8月</td>
 </tr>
 
 <tr>
 <td>難易度</td>
-<td>★★☆☆☆</td>
+<td>★★☆☆☆（比較的やさしい）</td>
+</tr>
+
+<tr>
+<td>科名</td>
+<td>ウリ科</td>
+</tr>
+
+<tr>
+<td>原産地</td>
+<td>インド北西部</td>
 </tr>
 
 </table>
 
-<br>
+</section>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Cucumber.jpg"
-width="300">
+<section>
 
-<br><br>
+<h2>関連サイト</h2>
+
+<div class="button-area">
 
 <a href="https://saijo-ah.esnet.ed.jp/" target="_blank">
-<button>西条農業高校</button>
+<button id="btn1">西条農業高校</button>
 </a>
 
 <a href="https://sakata-tsushin.com/oyakudachi/lesson/vegetable/post_34.html" target="_blank">
-<button>キュウリの栽培方法</button>
+<button id="btn2">キュウリの栽培方法</button>
 </a>
+
+</div>
+
+</section>
+
+<footer>
+2026 キュウリ紹介サイト
+</footer>
+
+<script>
+
+document.getElementById("btn1").onclick=function(){
+this.innerHTML="サイトを開きます！";
+this.style.backgroundColor="#e76f51";
+}
+
+document.getElementById("btn2").onclick=function(){
+this.innerHTML="栽培方法をチェック！";
+this.style.backgroundColor="#f4a261";
+}
+
+</script>
 
 </body>
 </html>
+```
